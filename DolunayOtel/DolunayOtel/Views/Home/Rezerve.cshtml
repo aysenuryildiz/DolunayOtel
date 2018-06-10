@@ -1,0 +1,139 @@
+﻿@{
+    ViewBag.Title = " ";
+    Layout = "~/Views/Shared/_mytemplate.cshtml";
+}
+<body>
+    <script>
+        function kontrol()
+        {
+            if (document.form1.isim.value == "")
+            {
+                alert("İsim Alanını Boş Bıraktınız…");
+                document.form1.isim.focus();
+                return false;
+            }
+            if (document.form1.soyisim.value == "")
+            {
+                alert("Soyisim Alanını Boş Bıraktınız…");
+                document.form1.soyisim.focus();
+                return false;
+            }
+
+        }
+    </script>
+    <?php
+    if(!isset($_POST['gonder']) )
+    {
+    ?>
+</body>
+<body bgcolor="#EDEDED">
+
+    <form name="form1" action="<? echo $_SERVER['PHP_SELF']; ?>" method="post" onsubmit="return kontrol()">
+        <table style="border-style:dashed; " align="left" border="0" cellpadding="0" cellspacing="7" width="96%" bgcolor="#EDEDED" bordercolor="#EDEDED">
+            <tbody>
+                <tr>
+                    <td style="width: 28%;" align="center">
+                        <b>
+                            <font face="Arial" style="font-size: 9pt">AD SOYAD:</font>
+                        </b>
+                    </td>
+                    <td align="left" width="66%">
+
+
+                        <input name="isim" size="20" type="text">
+
+                </tr>
+
+                <tr>
+                    <td style="width: 28%;" align="center">
+                        <b>
+                            <font face="Arial" style="font-size: 9pt">
+                                TELEFON:
+                            </font>
+                        </b>
+                    </td>
+                    <td align="left" width="66%">
+                        <input name="telefon" size="20" type="text">
+                </tr>
+
+
+
+                <tr>
+                    <td style="width: 28%;" align="center">
+                        <b>
+                            <font face="Arial" style="font-size: 9pt">
+                                MAİL:
+                            </font>
+                        </b>
+                    </td>
+                    <td align="left" width="66%">
+                        <input name="mail" size="20" type="text">
+                </tr>
+
+                <tr>
+                    <td style="width: 28%;" align="center">
+                        <b>
+                            <font face="Arial" style="font-size: 9pt">
+                                KİŞİ SAYISI:
+                            </font>
+                        </b>
+                    </td>
+                    <td align="left" width="66%">
+                        <input name="kisi" size="20" type="text">
+                </tr>
+                <tr>
+                    <td style="width: 28%;" align="center">
+                        <b>
+                            <font face="Arial" style="font-size: 9pt">
+                                GİRİŞ TARİHİ:
+                            </font>
+                        </b>
+                    </td>
+                    <td align="left" width="66%">
+                        <input name="giris" size="20" type="text">
+                </tr>
+
+
+
+                <tr>
+                    <td style="width: 28%;" align="center">
+                        <b>
+                            <font face="Arial" style="font-size: 9pt">
+                                ÇIKIŞ TARİHİ:
+                            </font>
+                        </b>
+                    </td>
+                    <td align="left" width="66%">
+                        <input name="cikis" size="20" type="text">
+                </tr>
+
+
+                <tr>
+                    <td align="center" valign="top">
+                        &nbsp;<p>
+                            <b>
+                                <font face="Arial" style="font-size: 9pt">İletmek istediğiniz notlar&nbsp; :</font>
+                            </b>
+                    </td>
+                    <td align="left" width="66%">
+                        <textarea name="mesaj" rows="7" cols="17" id="mesaj"></textarea>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6" align="center" height="45">
+                        <div align="center"> <input type="submit" name="gonder" value="Gönder"></div><br>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+</body>
+
+
+
+  
+    <div class="copyrights wrapper">
+        <p align="center"> Copyright © 2015 <a href="http://dolunayotel.com" target="_blank" class="ph_link" title=Daha fazla bilgi için:">dolunayhotel.com</a>. All Rights Reserved. </p>
+    </div>
